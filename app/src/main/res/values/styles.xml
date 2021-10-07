@@ -1,0 +1,49 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary3</item>
+        <item name="HListViewStyle">@style/HListViewStyle</item>
+        <item name="android:layoutDirection">ltr</item>
+    </style>
+    <style name="AppThemeStream" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary3</item>
+    </style>
+
+    <style name="sectionHeader"   parent="android:Widget.Holo.Light.TextView">
+        <item name="android:drawableBottom">@drawable/section_header</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/emphasis</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    //library
+    <attr name="HListViewStyle" format="reference"/>
+    <style name="HListViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">270dp</item>
+        <!-- not namespace prefix -->
+        <item name="item_width">200dp</item>
+        <item name="item_height">250dp</item>
+        <item name="spacing">10dp</item>
+        <item name="gravity">center</item>
+        <item name="left_offset">130dp</item>
+        <item name="right_offset">130dp</item>
+    </style>
+
+    <style name="Dur_video">
+        <item name="android:contentDescription">slm</item>
+    </style>
+    <style name="name_video">
+        <item name="android:contentDescription">slm</item>
+    </style>
+
+</resources>

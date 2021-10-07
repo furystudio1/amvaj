@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customParam="http://schemas.android.com/tools"
+    android:id="@+id/rl_suport"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    customParam:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/loginback" />
+
+    <ScrollView
+        android:id="@+id/sc_suport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginRight="105dp"
+                android:layout_marginBottom="50dp"
+                app:cardBackgroundColor="@color/black_transparent"
+                app:cardCornerRadius="26dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="35dp"
+                    android:orientation="vertical">
+
+                    <com.agntic.waves.widget.Font
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        android:gravity="center"
+                        android:text="@string/authentication"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.agntic.waves.widget.MaterialTextField
+                            android:id="@+id/test1"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="25dp"
+                            app:mtf_animationDuration="1000"
+                            app:mtf_cardCollapsedHeight="2dp"
+                            app:mtf_image="@drawable/address"
+                            app:mtf_labelColor="@color/text_color_2"
+                            app:mtf_openKeyboardOnFocus="true">
+
+                            <EditText
+                                android:id="@+id/IPserver"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/IP_Server"
+                                android:inputType="textUri"
+                                android:maxLines="1"
+                                android:textColor="#333"
+                                android:textColorHint="#666"
+                                android:textSize="25sp" />
+
+                        </com.agntic.waves.widget.MaterialTextField>
+
+                        <com.agntic.waves.widget.MaterialTextField
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="25dp"
+                            android:layout_toRightOf="@+id/test1"
+                            app:mtf_animationDuration="1000"
+                            app:mtf_cardCollapsedHeight="2dp"
+                            app:mtf_image="@drawable/address"
+                            app:mtf_labelColor="@color/text_color_2"
+                            app:mtf_openKeyboardOnFocus="true">
+
+                            <EditText
+                                android:id="@+id/IPweb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/IP_Web_Service"
+                                android:inputType="textUri"
+                                android:maxLines="5"
+                                android:textColor="#333"
+                                android:textColorHint="#666"
+                                android:textSize="25sp" />
+
+                        </com.agntic.waves.widget.MaterialTextField>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.agntic.waves.widget.MaterialTextField
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="25dp"
+                            app:mtf_animationDuration="1000"
+                            app:mtf_cardCollapsedHeight="2dp"
+                            app:mtf_image="@drawable/username"
+                            app:mtf_labelColor="@color/text_color_2"
+                            app:mtf_openKeyboardOnFocus="true">
+
+                            <EditText
+                                android:id="@+id/username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/username"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:textColor="#333"
+                                android:textColorHint="#666"
+                                android:textSize="25sp" />
+
+                        </com.agntic.waves.widget.MaterialTextField>
+
+                        <com.agntic.waves.widget.MaterialTextField
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="25dp"
+                            android:layout_toRightOf="@+id/test1"
+                            app:mtf_animationDuration="1000"
+                            app:mtf_cardCollapsedHeight="2dp"
+                            app:mtf_image="@drawable/password"
+                            app:mtf_labelColor="@color/text_color_2"
+                            app:mtf_openKeyboardOnFocus="true">
+
+                            <EditText
+                                android:id="@+id/password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/password"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:textColor="#333"
+                                android:textColorHint="#666"
+                                android:textSize="25sp" />
+
+                        </com.agntic.waves.widget.MaterialTextField>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.agntic.waves.widget.MaterialTextField
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="25dp"
+                            app:mtf_animationDuration="1000"
+                            app:mtf_cardCollapsedHeight="2dp"
+                            app:mtf_image="@drawable/room"
+                            app:mtf_labelColor="@color/text_color_2"
+                            app:mtf_openKeyboardOnFocus="true">
+
+                            <EditText
+                                android:id="@+id/Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Bed_Name"
+                                android:inputType="textShortMessage"
+                                android:maxLines="5"
+                                android:textColor="#333"
+                                android:textColorHint="#666"
+                                android:textSize="25sp" />
+
+                        </com.agntic.waves.widget.MaterialTextField>
+
+                        <com.agntic.waves.widget.MaterialTextField
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="25dp"
+                            android:layout_toRightOf="@+id/test1"
+                            app:mtf_animationDuration="1000"
+                            app:mtf_cardCollapsedHeight="2dp"
+                            app:mtf_image="@drawable/custome"
+                            app:mtf_labelColor="@color/text_color_2"
+                            app:mtf_openKeyboardOnFocus="true">
+
+                            <EditText
+                                android:id="@+id/custom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Custom"
+                                android:inputType="textShortMessage"
+                                android:maxLines="5"
+                                android:textColor="#333"
+                                android:textColorHint="#666"
+                                android:textSize="25sp" />
+
+                        </com.agntic.waves.widget.MaterialTextField>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_send"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/cv_cardview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="15dp">
+
+                <com.agntic.waves.widget.Font
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/loginsave"
+                    android:gravity="center"
+                    android:text="@string/Save"
+                    android:textColor="@color/text_color_2" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

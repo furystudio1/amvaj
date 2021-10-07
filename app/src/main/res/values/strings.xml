@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">امواج</string>
+
+    <string name="authentication">authentication</string>
+    <string name="IP_Server">IP Server</string>
+    <string name="IP_Web_Service">IP Web Service</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="Bed_Name">Bed Name</string>
+    <string name="Custom">Authorize access token</string>
+    <string name="Save">Save</string>
+
+
+    <string name="appname2">امواج گستر نوین</string>
+    <string name="version">version waves v1.3.4</string>
+    <string name="version2">1.3.4</string>
+
+
+    <string name="room">واحد</string>
+    <string name="roomEng">Room</string>
+    <string name="roomAR">مجال</string>
+    <string name="room2">واحد 1</string>
+    <string name="clock">ساعت</string>
+    <string name="clockEng">Clock</string>
+    <string name="clockAR">الساعة</string>
+    <string name="weather">آب و هوا</string>
+    <string name="weatherEng">Weather</string>
+    <string name="weatherAR">طقس</string>
+    <string name="mmm">Language</string>
+    <string name="mmmEng">Language</string>
+    <string name="mmmAR">Language</string>
+    <string name="mmmfa">زبان</string>
+    <string name="net">اتصال شبکه</string>
+    <string name="netEng">Network</string>
+    <string name="netAR">إتصال شبكة</string>
+    <string name="tv">تلویزیون</string>
+    <string name="tvEng">Television</string>
+    <string name="tvAR">التلفاز</string>
+    <string name="video">رسانه</string>
+    <string name="videoEng">Media</string>
+    <string name="videoAR">وسائط</string>
+    <string name="music">موزیک</string>
+    <string name="musicEng">Music</string>
+    <string name="musicAR">موسيقى</string>
+    <string name="news">روزنامه رسمی</string>
+    <string name="newsEng">Newspaper</string>
+    <string name="newsAR">الجريدة</string>
+    <string name="www">خدمات</string>
+    <string name="wwwEng">Services</string>
+    <string name="wwwAR">الخدمات</string>
+    <string name="tvname">Radio Javan HD</string>
+    <string name="live">درحال پخش</string>
+    <string name="liveEng">Playing</string>
+    <string name="liveAR">تلعب</string>
+
+    <string name="watch">تماشا کنید</string>
+    <string name="watchEng">Watch</string>
+    <string name="watchAR">راقب</string>
+    <string name="movie">فیلم</string>
+    <string name="movieEng">Movie</string>
+    <string name="movieAR">الفيلم</string>
+    <string name="aboutMovie">درباره فیلم</string>
+    <string name="aboutMovieEng">About the movie</string>
+    <string name="aboutMovieAR">عن الفيلم</string>
+
+    <string name="wlc">خوش آمدید</string>
+    <string name="wlcEng">Welcome</string>
+    <string name="wlcAR">أهلا بك</string>
+    <string name="wlcname">به امواج گستر نوین</string>
+    <string name="wlcnameEng">To the Waves</string>
+    <string name="wlcnameAR">إلى الأمواج</string>
+    <string name="connectionOn">وصل</string>
+    <string name="connectionOnEng">Connected</string>
+    <string name="connectionOnAR">متصل</string>
+    <string name="connectionOff">قطع</string>
+    <string name="connectionOffEng">Disconnect</string>
+    <string name="connectionOffAR">قطع الاتصال</string>
+    <string name="tvlist">تمام شبکه ها</string>
+    <string name="tvlistEng">All TV channels</string>
+    <string name="tvlistAR">جميع القنوات التلفزيونية</string>
+    <string name="tvlistF">شبکه های مورد علاقه</string>
+    <string name="tvlistFEng">Favorite channels</string>
+    <string name="tvlistFAR">القنوات المفضلة</string>
+    <string name="delete">در حذف اطلاعات اشکالی وجود دارد</string>
+    <string name="deleteEng">There is something wrong with deleting the information</string>
+    <string name="deleteAR">هناك خطأ ما في حذف المعلومات</string>
+    <string name="listEmpty">لیست شبکه های موردعلاقه خالی است</string>
+    <string name="listEmptyEng">The list of favorite channels is empty</string>
+    <string name="listEmptyAR">قائمة القنوات المفضلة فارغة</string>
+
+
+    <string name="download_eta_sec">%1$ds left</string>
+    <string name="download_eta_min">%1$dm %2$ds left</string>
+    <string name="download_eta_hrs">%1$dh %2$dm %3$ds left</string>
+    <string name="download_speed_bytes">%1$d B/s</string>
+    <string name="download_speed_kb">%1$s KB/s</string>
+    <string name="download_speed_mb">%1$s MB/s</string>
+
+    <string name="percent_progress">%1$d%%</string>
+    <string name="downloading">downloading…</string>
+    <string name="queued">QUEUED</string>
+    <string name="added">ADDED</string>
+    <string name="status_unknown">Status Unknown</string>
+
+    <string name="catMusic">دسته بندی موسیقی</string>
+    <string name="catMusicENG">Music categories</string>
+    <string name="catMusicAR">فئات الموسيقى</string>
+</resources>

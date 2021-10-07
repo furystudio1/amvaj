@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#c09840</color>
+    <color name="color_listmusic_on">#66171717</color>
+    <color name="color_listmusic_off">#CD171717</color>
+    <color name="color_video_music_on">#00171717</color>
+    <color name="color_video_music_off">#80171717</color>
+    <color name="colorvod">#80000000</color>
+    <color name="colorvod2">#5BFFFFFF</color>
+    <color name="colorPrimary2">#876110</color>
+    <color name="colorPrimary4">#C5A560</color>
+    <color name="colorPrimary5">#4DC5A560</color>
+    <color name="colorPrimary6">#66C5A560</color>
+    <color name="colorPrimary7">#B0FFB617</color>
+    <color name="colorPrimary8">#ffb617</color>
+    <color name="colorPrimary9">#252451F3</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="colorPrimaryDark2">#40222222</color>
+    <color name="colorPrimary3">#333333</color>
+    <color name="black_transparent">#66000000</color>
+    <color name="black_transparent2">#25000000</color>
+    <color name="black_transparent3">#32000000</color>
+    <color name="black_transparent4">#00000000</color>
+<color name="text_color_2">#feffff</color>
+<color name="text_color_1">#dedede</color>
+    <color name="blue_grey">#607d8b</color>
+    <color name="emphasis">#31b6e7</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="hich">#00000000</color>
+    <color name="hich2">#14FFFFFF</color>
+
+</resources>

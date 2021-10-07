@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/buttonback"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:id="@+id/btnItemChannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonback5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/numberChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="1"
+            android:textColor="@color/text_color_1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/nameChannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/nameChannel"
+            android:gravity="center|left"
+            android:padding="5dp"
+            android:text="Radio Javan HD"
+            android:textColor="@color/text_color_2"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

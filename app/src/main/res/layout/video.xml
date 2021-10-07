@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Video">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background_video"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_1"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lb_action_1_line_height"
+                android:text="جدید ترین ها"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_1"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_2"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="اکشن"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_2"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_3"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="عاشقانه"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_3"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_4"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="test1"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_4"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_5"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="test1"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_5"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_6"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="test1"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_6"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_7"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="test1"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_7"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_8"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="test1"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_8"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_9"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="test1"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_9"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_video_list_10"
+                android:layout_marginLeft="140dp"
+                android:layout_marginRight="140dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="test1"/>
+    <cn.septenary.widget.HListView
+        android:id="@+id/video_list_10"
+        style="?HListViewStyle">
+
+        <requestFocus/>
+    </cn.septenary.widget.HListView>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

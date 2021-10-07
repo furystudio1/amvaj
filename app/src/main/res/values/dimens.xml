@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+<dimen name="mtf_cardHeight_final">55dp</dimen>
+    <dimen name="mtf_cardHeight_initial">4dp</dimen>
+    <dimen name="mtf_corner_radius">4dp</dimen>
+    <dimen name="lemniscate_stroke_width">10dp</dimen>
+    <dimen name="lemniscate_preferred_width">80dp</dimen>
+    <dimen name="lemniscate_preferred_height">80dp</dimen>
+
+</resources>

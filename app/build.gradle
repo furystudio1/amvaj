@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    defaultConfig {
+        applicationId "com.agntic.waves"
+        minSdkVersion 22
+        //noinspection ExpiredTargetSdkVersion,ExpiredTargetSdkVersion
+        targetSdkVersion 30
+        versionCode 64
+        versionName "1.3.5"
+        resConfigs "en"
+
+        ndk {
+            // armeabi: has been eliminated (0%)
+            // armeabi-v7a: once mainstream architecture platform (20%)
+            // arm64-v8a: The current mainstream architecture platform (80%)
+            //"x86_64",
+            abiFilters "x86", "armeabi-v7a"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    testImplementation 'junit:junit:4.13.1'
+    //noinspection GradleCompatible
+    //noinspection GradleCompatible
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.alibaba:fastjson:1.2.75'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.henryblue.library:tvrecyclerview:1.2.4'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //noinspection GradleCompatible
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.dev.sacot41:scviewpager:0.0.4'
+    implementation 'com.github.ksoichiro:android-observablescrollview:1.6.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    implementation 'org.videolan.android:libvlc-all:3.3.12'
+
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    implementation 'com.google.android.libraries.tv:companionlibrary:0.2'
+
+    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:23.0.1'
+    implementation project(':lib')
+
+    api 'com.google.android.exoplayer:exoplayer:2.15.0'
+    api 'com.google.android.exoplayer:exoplayer-core:2.15.0'
+    api 'com.google.android.exoplayer:exoplayer-dash:2.15.0'
+    api 'com.google.android.exoplayer:exoplayer-ui:2.15.0'
+    api 'com.google.android.exoplayer:exoplayer-hls:2.15.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+
+    implementation 'com.felipecsl.asymmetricgridview:library:2.0.1'
+
+}
