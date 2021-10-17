@@ -951,7 +951,7 @@ public class MusicList extends AppCompatActivity {
     public void videolist() {
         try {
 
-            String url = IPserver + "/vod/movie/json.php";
+            String url = "http://" + IPserver + "/Amvaj/music/json.php";
             //String url = "http://46.100.60.180/vod/music/json.php";
 
             RequestQueue requestQueue = Volley.newRequestQueue(MusicList.this);

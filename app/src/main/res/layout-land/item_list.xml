@@ -10,7 +10,10 @@
         android:id="@+id/btnItemChannel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:background="@drawable/buttonback5"
+        android:focusableInTouchMode="true"
         android:orientation="horizontal">
 
         <TextView
@@ -26,7 +29,7 @@
             android:paddingBottom="5dp"
             android:text="0001"
             android:textColor="@color/text_color_1"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/nameChannel"
@@ -37,6 +40,6 @@
             android:padding="5dp"
             android:text="Radio Javan HD"
             android:textColor="@color/text_color_2"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 </RelativeLayout>

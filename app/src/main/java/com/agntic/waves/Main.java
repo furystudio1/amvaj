@@ -69,6 +69,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.pnikosis.materialishprogress.ProgressWheel;
 
 import org.json.JSONArray;
@@ -232,9 +233,12 @@ public class Main extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        FirebaseCrashlytics.getInstance().log("message 1");
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         //start activ
         setContentView(R.layout.root_listtv_livetv);
+
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -255,7 +259,7 @@ public class Main extends Activity {
         try {
             checkPermissions();
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -263,7 +267,7 @@ public class Main extends Activity {
             dbm = new DatabaseManager(this);
             likenumber = dbm.personCount();
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -286,7 +290,7 @@ public class Main extends Activity {
             language = one_play_preferences.getInt("Language", 1);
             firsttime = one_play_preferences.getBoolean("60", true);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -369,7 +373,7 @@ public class Main extends Activity {
             updateTab.setVisibility(View.GONE);
 
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -395,7 +399,7 @@ public class Main extends Activity {
                     namechannelmenu2.setText(R.string.live);
                 }
             }catch (Exception e){
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
@@ -404,7 +408,7 @@ public class Main extends Activity {
                 String ywd = util.getCurrentShamsidate();
                 datetv.setText(setPersianNumbers(ywd));
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
@@ -432,14 +436,14 @@ public class Main extends Activity {
                     namechannelmenu2.setText(R.string.liveEng);
                 }
             }catch (Exception e){
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
             try {
                 datetv.setText(DateFormat.format("dd-MM-yyyy", System.currentTimeMillis()).toString());
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
@@ -466,14 +470,14 @@ public class Main extends Activity {
                     namechannelmenu2.setText(R.string.liveAR);
                 }
             }catch (Exception e){
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
             try {
                 datetv.setText(DateFormat.format("dd-MM-yyyy", System.currentTimeMillis()).toString());
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
@@ -508,7 +512,7 @@ public class Main extends Activity {
             datetv.setTypeface(typeface);
             textmusicw.setTypeface(typeface);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -550,7 +554,7 @@ public class Main extends Activity {
             Glide.with(this).load(getImage("home"))
                     .thumbnail(0.5f).into(hometv);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -558,7 +562,7 @@ public class Main extends Activity {
             namechannelmenu.setText(lastchannelname);
             namechannelmenu.setPaintFlags(namechannelmenu.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -626,7 +630,7 @@ public class Main extends Activity {
             recyclerView.setAdapter(videoAdapter);
 
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -769,7 +773,7 @@ public class Main extends Activity {
                     Visible(1);
 
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -833,7 +837,7 @@ public class Main extends Activity {
 
 
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -908,7 +912,7 @@ public class Main extends Activity {
                     }
 
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -937,7 +941,7 @@ public class Main extends Activity {
                             }
                         }
                     } catch (Exception e) {
-                        Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                        FirebaseCrashlytics.getInstance().recordException(e);
                         e.printStackTrace();
                     }
                 }
@@ -983,7 +987,7 @@ public class Main extends Activity {
 
 
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -999,7 +1003,7 @@ public class Main extends Activity {
                     Main.this.finish();
 
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -1012,7 +1016,7 @@ public class Main extends Activity {
 
 
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -1030,7 +1034,7 @@ public class Main extends Activity {
                     Visible(4);
 
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -1044,7 +1048,7 @@ public class Main extends Activity {
                     Visible(5);
 
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -1068,7 +1072,7 @@ public class Main extends Activity {
                     try {
                         Toast.makeText(Main.this, "لطفا احراز هویت کنید", Toast.LENGTH_LONG).show();
                     } catch (Exception e) {
-                        Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                        FirebaseCrashlytics.getInstance().recordException(e);
                         e.printStackTrace();
                     }
 
@@ -1076,7 +1080,7 @@ public class Main extends Activity {
                         one_play_editor.putInt("one_play_app", 3);
                         one_play_editor.apply();
                     } catch (Exception e) {
-                        Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                        FirebaseCrashlytics.getInstance().recordException(e);
                         e.printStackTrace();
                     }
 
@@ -1086,7 +1090,7 @@ public class Main extends Activity {
                         startActivity(uou3);
                         Main.this.finish();
                     } catch (Exception e) {
-                        Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                        FirebaseCrashlytics.getInstance().recordException(e);
                         e.printStackTrace();
                     }
 
@@ -1099,7 +1103,7 @@ public class Main extends Activity {
 
             //time1.setText(DateFormat.format("h:mm aa", currentTime).toString());
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -1124,7 +1128,7 @@ public class Main extends Activity {
                         clocktv.setText(setPersianNumbers(DateFormat.format("h : mm", currentTime.toMillis(true)).toString()));
                     }
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
 
@@ -1158,7 +1162,7 @@ public class Main extends Activity {
 
                     }
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
 
@@ -1182,7 +1186,7 @@ public class Main extends Activity {
                         clocktv.setText(setPersianNumbers(DateFormat.format("h : mm", currentTime.toMillis(true)).toString()));
                     }
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -1196,7 +1200,7 @@ public class Main extends Activity {
         try {
             SAMPLE_URL = "http://" + username + ":" + password + "@" + IPserver + "/stream/channel/" + lastchannel;
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -1220,7 +1224,7 @@ public class Main extends Activity {
             mMediaPlayer = new MediaPlayer(mLibVLC);
 //        mMediaPlayer2 = new MediaPlayer(mLibVLC);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
         try {
@@ -1228,7 +1232,7 @@ public class Main extends Activity {
 //        mVideoSurfaceFrame1 = (FrameLayout) findViewById(R.id.video_surface_frame1);
 //        mVideoSurface1 = (SurfaceView) findViewById(R.id.video_surface1);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
         try {
@@ -1252,7 +1256,7 @@ public class Main extends Activity {
             mMediaPlayer.play();
             //mMediaPlayer.setRate(.5f);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -1289,7 +1293,7 @@ public class Main extends Activity {
             //wb.loadUrl("http://192.168.2.98/webservice/2020/12/17/hello-world/");
             wb.loadUrl(Url);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -1309,7 +1313,7 @@ public class Main extends Activity {
             //wb.loadUrl("http://192.168.2.98/webservice/2020/12/17/hello-world/");
             wb2.loadUrl(Url2);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -1414,7 +1418,7 @@ public class Main extends Activity {
                 try {
                     Toast.makeText(Main.this, "در صورت نپذیرفتن درخواست ها برنامه با مشکل مواجه می شود!", Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
             }
@@ -1429,7 +1433,7 @@ public class Main extends Activity {
             mLibVLC.release();
             c.StopTick();
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
     }
@@ -1442,7 +1446,7 @@ public class Main extends Activity {
             mMediaPlayer.detachViews();
             c.StopTick();
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
     }
@@ -1459,7 +1463,7 @@ public class Main extends Activity {
                     // Go TO Page Back (Page 1 or MainActivity)
                     Main.this.finish();
                 } catch (Exception e) {
-                    Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                    FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
                 }
                 return;
@@ -1480,7 +1484,7 @@ public class Main extends Activity {
             try {
                 SAMPLE_URL = "http://" + username + ":" + password + "@" + IPserver + "/stream/channel/" + lastchannel;
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
@@ -1504,7 +1508,7 @@ public class Main extends Activity {
                 mMediaPlayer = new MediaPlayer(mLibVLC);
 //        mMediaPlayer2 = new MediaPlayer(mLibVLC);
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
             try {
@@ -1512,7 +1516,7 @@ public class Main extends Activity {
 //        mVideoSurfaceFrame1 = (FrameLayout) findViewById(R.id.video_surface_frame1);
 //        mVideoSurface1 = (SurfaceView) findViewById(R.id.video_surface1);
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
             try {
@@ -1536,7 +1540,7 @@ public class Main extends Activity {
                 mMediaPlayer.play();
                 //mMediaPlayer.setRate(.5f);
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
@@ -1548,7 +1552,7 @@ public class Main extends Activity {
             try {
                 SAMPLE_URL = "http://" + username + ":" + password + "@" + IPserver + "/stream/channel/" + lastchannel;
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
@@ -1572,7 +1576,7 @@ public class Main extends Activity {
                 mMediaPlayer = new MediaPlayer(mLibVLC);
 //        mMediaPlayer2 = new MediaPlayer(mLibVLC);
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
             try {
@@ -1580,7 +1584,7 @@ public class Main extends Activity {
 //        mVideoSurfaceFrame1 = (FrameLayout) findViewById(R.id.video_surface_frame1);
 //        mVideoSurface1 = (SurfaceView) findViewById(R.id.video_surface1);
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
             try {
@@ -1604,7 +1608,7 @@ public class Main extends Activity {
                 mMediaPlayer.play();
                 //mMediaPlayer.setRate(.5f);
             } catch (Exception e) {
-                Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+                FirebaseCrashlytics.getInstance().recordException(e);
                 e.printStackTrace();
             }
 
@@ -1751,9 +1755,9 @@ public class Main extends Activity {
     public void video() {
         try {
             RequestQueue requestQueue = Volley.newRequestQueue(Main.this);
-            ///String url = "http://" + IPserver + "/api/channel/grid";
+            String url = "http://" + IPserver + "/api/channel/grid";
             //String url = "http://109.125.130.155:2560//api/channel/grid";
-            String url = "http://46.100.60.180/vod/json.php";
+            //String url = "http://46.100.60.180/vod/json.php";
 
         /*JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
@@ -1869,7 +1873,7 @@ public class Main extends Activity {
 
             requestQueue.add(jsonObjectRequest);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -1896,14 +1900,14 @@ public class Main extends Activity {
             media.release();
             mMediaPlayer.play();
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
         try {
             nametv.setText(name);
             namechannelmenu.setText(name);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -1913,7 +1917,7 @@ public class Main extends Activity {
             one_play_editor.putString("lastchannelname", name);
             one_play_editor.apply();
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
 
@@ -2234,7 +2238,7 @@ public class Main extends Activity {
     public void auth_update() {
         try {
             RequestQueue requestQueue = Volley.newRequestQueue(Main.this);
-            String url = "http://46.100.60.180/update/json.php?auth=" + Auth;
+            String url = "http://188.158.121.78:81/Amvaj/update/json.php?auth=" + Auth;
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, null, new Response.Listener<JSONObject>() {
 
@@ -2306,7 +2310,7 @@ public class Main extends Activity {
 
             requestQueue.add(jsonObjectRequest);
         } catch (Exception e) {
-            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();
         }
     }

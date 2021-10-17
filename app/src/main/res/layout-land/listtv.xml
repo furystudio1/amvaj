@@ -8,8 +8,8 @@
     android:layout_gravity="left"
     android:background="@color/colorPrimary9"
     tools:ignore="MissingDefaultResource"
-    android:paddingLeft="25dp"
-    android:paddingRight="25dp">
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RecycleList"
             android:layout_width="wrap_content"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:focusable="true"
             android:layout_height="wrap_content"/>
     </androidx.core.widget.NestedScrollView>

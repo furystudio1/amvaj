@@ -163,7 +163,7 @@ public class VODvideo extends AppCompatActivity {
     public void videolist() {
         try {
             RequestQueue requestQueue = Volley.newRequestQueue(VODvideo.this);
-            String url = IPserver + "/vod/movie/json.php";
+            String url = "http://" + IPserver + "/Amvaj/movie/json.php";
             //String url = "https://amvaj.airfinance.org/VOD/movie/json.php";
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, null, new Response.Listener<JSONObject>() {

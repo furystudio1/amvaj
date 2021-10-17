@@ -2,7 +2,9 @@ package com.agntic.waves.Model;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +15,14 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.agntic.waves.ListVOD.VODvideo;
+import com.agntic.waves.ListVOD.models.Mobile;
 import com.agntic.waves.Main;
 import com.agntic.waves.R;
 import com.agntic.waves.Stream;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -127,6 +133,24 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                 }
             }
         });
+
+
+        holder.btnItemVideo.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+                    holder.Name.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
+
+                }else {
+
+                    v.animate().scaleY(1f).scaleX(1f).start();
+                    holder.Name.setTextSize(TypedValue.COMPLEX_UNIT_SP,16);
+                }
+            }
+        });
+
+
     }
 
     @Override
