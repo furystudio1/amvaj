@@ -223,6 +223,11 @@ public class VODdetailVideo extends AppCompatActivity {
         //Log.e("getDuration", "Error : " + exoPlayer.getDuration() + " " + exoPlayer.getClock() + " " + exoPlayer.getVideoSize() + " " + exoPlayer.getVideoFormat());
 
 
+
+        btn_play_video.setFocusable(true);
+        btn_play_video.setFocusableInTouchMode(true);
+        btn_play_video.requestFocus();
+
         btn_play_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

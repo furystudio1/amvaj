@@ -44,6 +44,7 @@
         android:largeHeap="true"
         android:banner="@drawable/banner2"
         android:logo="@drawable/banner2">
+
         <activity android:name=".Login"
             android:screenOrientation="landscape"
             android:configChanges="keyboard|orientation|keyboardHidden|screenLayout|screenSize|navigation"

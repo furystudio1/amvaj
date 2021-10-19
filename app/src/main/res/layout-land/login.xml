@@ -23,24 +23,26 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center">
+            android:layout_gravity="center">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_cardview"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="50dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="@color/black_transparent"
+                app:cardBackgroundColor="@color/black_transparent2"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
                     android:orientation="vertical">
 
                     <com.agntic.waves.widget.Font
@@ -55,67 +57,64 @@
                         android:textSize="15sp" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <com.agntic.waves.widget.MaterialTextField
-                            android:id="@+id/test1"
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/filledTextField"
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
                             android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            app:mtf_animationDuration="1000"
-                            app:mtf_cardCollapsedHeight="2dp"
-                            app:mtf_image="@drawable/address"
-                            app:mtf_labelColor="@color/text_color_2"
-                            app:mtf_openKeyboardOnFocus="true">
+                            android:layout_marginBottom="5dp"
+                            app:startIconDrawable="@drawable/address"
+                            app:startIconContentDescription="@string/IP_Server"
+                            app:endIconMode="clear_text"
+                            android:hint="@string/IP_Server">
 
-                            <EditText
-                                android:id="@+id/IPserver"
+                            <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/IP_Server"
+                                android:id="@+id/IPserver"
+                                android:maxLines="1"
+                                android:textColor="#333"
+                                android:textColorHint="#666"
+                                android:textSize="14sp"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            app:startIconDrawable="@drawable/address"
+                            app:startIconContentDescription="@string/IP_Web_Service"
+                            app:endIconMode="clear_text"
+                            android:hint="@string/IP_Web_Service">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/IPweb"
                                 android:inputType="textUri"
                                 android:maxLines="1"
                                 android:textColor="#333"
                                 android:textColorHint="#666"
-                                android:textSize="10sp" />
+                                android:textSize="14sp"
+                                />
 
-                        </com.agntic.waves.widget.MaterialTextField>
-
-                        <com.agntic.waves.widget.MaterialTextField
-                            android:layout_width="250dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="25dp"
-                            android:layout_marginBottom="3dp"
-                            android:layout_toRightOf="@+id/test1"
-                            app:mtf_animationDuration="1000"
-                            app:mtf_cardCollapsedHeight="2dp"
-                            app:mtf_image="@drawable/address"
-                            app:mtf_labelColor="@color/text_color_2"
-                            app:mtf_openKeyboardOnFocus="true">
-
-                            <EditText
-                                android:id="@+id/IPweb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/IP_Web_Service"
-                                android:inputType="textUri"
-                                android:maxLines="5"
-                                android:textColor="#333"
-                                android:textColorHint="#666"
-                                android:textSize="10sp" />
-
-                        </com.agntic.waves.widget.MaterialTextField>
+                        </com.google.android.material.textfield.TextInputLayout>
 
                     </LinearLayout>
 
@@ -127,60 +126,57 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <com.agntic.waves.widget.MaterialTextField
+
+                        <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
                             android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            app:mtf_animationDuration="1000"
-                            app:mtf_cardCollapsedHeight="2dp"
-                            app:mtf_image="@drawable/username"
-                            app:mtf_labelColor="@color/text_color_2"
-                            app:mtf_openKeyboardOnFocus="true">
+                            android:layout_marginBottom="5dp"
+                            app:startIconDrawable="@drawable/username"
+                            app:startIconContentDescription="@string/username"
+                            app:endIconMode="clear_text"
+                            android:hint="@string/username">
 
-                            <EditText
-                                android:id="@+id/username"
+                            <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/username"
+                                android:id="@+id/username"
                                 android:inputType="text"
                                 android:maxLines="1"
                                 android:textColor="#333"
                                 android:textColorHint="#666"
-                                android:textSize="10sp" />
+                                android:textSize="14sp"
+                                />
 
-                        </com.agntic.waves.widget.MaterialTextField>
+                        </com.google.android.material.textfield.TextInputLayout>
 
-                        <com.agntic.waves.widget.MaterialTextField
+
+                        <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="25dp"
-                            android:layout_marginBottom="3dp"
-                            android:layout_toRightOf="@+id/test1"
-                            app:mtf_animationDuration="1000"
-                            app:mtf_cardCollapsedHeight="2dp"
-                            app:mtf_image="@drawable/password"
-                            app:mtf_labelColor="@color/text_color_2"
-                            app:mtf_openKeyboardOnFocus="true">
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            app:endIconMode="password_toggle"
+                            app:startIconDrawable="@drawable/password"
+                            app:startIconContentDescription="@string/password"
+                            android:hint="@string/password">
 
-                            <EditText
-                                android:id="@+id/password"
+                            <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/password"
+                                android:id="@+id/password"
                                 android:inputType="textPassword"
                                 android:maxLines="1"
                                 android:textColor="#333"
                                 android:textColorHint="#666"
-                                android:textSize="10sp" />
+                                android:textSize="14sp"
+                                />
 
-                        </com.agntic.waves.widget.MaterialTextField>
+                        </com.google.android.material.textfield.TextInputLayout>
 
                     </LinearLayout>
 
@@ -191,60 +187,58 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <com.agntic.waves.widget.MaterialTextField
+
+                        <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            app:mtf_animationDuration="1000"
-                            app:mtf_cardCollapsedHeight="2dp"
-                            app:mtf_image="@drawable/room"
-                            app:mtf_labelColor="@color/text_color_2"
-                            app:mtf_openKeyboardOnFocus="true">
-
-                            <EditText
-                                android:id="@+id/Name"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/Bed_Name"
-                                android:inputType="textShortMessage"
-                                android:maxLines="5"
-                                android:textColor="#333"
-                                android:textColorHint="#666"
-                                android:textSize="10sp" />
-
-                        </com.agntic.waves.widget.MaterialTextField>
-
-                        <com.agntic.waves.widget.MaterialTextField
-                            android:layout_width="250dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="25dp"
-                            android:layout_marginBottom="3dp"
-                            android:layout_toRightOf="@+id/test1"
-                            app:mtf_animationDuration="1000"
-                            app:mtf_cardCollapsedHeight="2dp"
-                            app:mtf_image="@drawable/custome"
-                            app:mtf_labelColor="@color/text_color_2"
-                            app:mtf_openKeyboardOnFocus="true">
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            app:startIconDrawable="@drawable/room"
+                            app:startIconContentDescription="@string/Bed_Name"
+                            app:endIconMode="clear_text"
+                            android:hint="@string/Bed_Name">
 
-                            <EditText
-                                android:id="@+id/custom"
+                            <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/Custom"
+                                android:id="@+id/Name"
                                 android:inputType="textShortMessage"
-                                android:maxLines="5"
+                                android:maxLines="1"
                                 android:textColor="#333"
                                 android:textColorHint="#666"
-                                android:textSize="10sp" />
+                                android:textSize="14sp"
+                                />
 
-                        </com.agntic.waves.widget.MaterialTextField>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            app:endIconMode="password_toggle"
+                            app:startIconDrawable="@drawable/custome"
+                            app:startIconContentDescription="@string/Custom"
+                            android:hint="@string/Custom">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/custom"
+                                android:inputType="textShortMessage"
+                                android:maxLines="1"
+                                android:textColor="#333"
+                                android:textColorHint="#666"
+                                android:textSize="14sp"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
 
                     </LinearLayout>
 
@@ -256,10 +250,10 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_below="@+id/cv_cardview"
-                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
                 android:layout_marginBottom="20dp"
-                android:gravity="center"
                 app:cardBackgroundColor="@color/colorPrimaryDark"
+                android:focusableInTouchMode="true"
                 app:cardCornerRadius="6dp"
                 app:cardElevation="15dp">
 

@@ -17,6 +17,7 @@ import androidx.cardview.widget.CardView;
 
 import com.agntic.waves.widget.PermissionHandler;
 import com.bumptech.glide.Glide;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class Login extends Activity {
 
@@ -24,11 +25,11 @@ public class Login extends Activity {
     SharedPreferences one_play_preferences;
     SharedPreferences.Editor one_play_editor;
 
-    int oneplay, custom;
+    int oneplay;
 
-    String Ipserver, User, Pass, Ipweb, name;
+    String Ipserver, User, Pass, Ipweb, name,custom;
 
-    EditText IPserver, username, password, IPweb, Name, Custom;
+    TextInputEditText IPserver, username, password, IPweb, Name, Custom;
 
     CardView btn_send;
     ImageView loginback;
@@ -48,12 +49,12 @@ public class Login extends Activity {
 
         try {
             //font
-            IPserver = (EditText) findViewById(R.id.IPserver);
-            username = (EditText) findViewById(R.id.username);
-            password = (EditText) findViewById(R.id.password);
-            IPweb = (EditText) findViewById(R.id.IPweb);
-            Name = (EditText) findViewById(R.id.Name);
-            Custom = (EditText) findViewById(R.id.custom);
+            IPserver = (TextInputEditText) findViewById(R.id.IPserver);
+            username = (TextInputEditText) findViewById(R.id.username);
+            password = (TextInputEditText) findViewById(R.id.password);
+            IPweb = (TextInputEditText) findViewById(R.id.IPweb);
+            Name = (TextInputEditText) findViewById(R.id.Name);
+            Custom = (TextInputEditText) findViewById(R.id.custom);
             btn_send = (CardView) findViewById(R.id.btn_send);
             loginback = (ImageView) findViewById(R.id.loginback);
         } catch (Exception e) {
@@ -86,7 +87,7 @@ public class Login extends Activity {
             Pass = one_play_preferences.getString("password", "");
             Ipweb = one_play_preferences.getString("IPweb", "");
             name = one_play_preferences.getString("NameRoom", "");
-            custom = one_play_preferences.getInt("Custom", 1);
+            custom = one_play_preferences.getString("auth", "");
 
             one_play_editor.putBoolean("ONE", false);
             one_play_editor.apply();
@@ -94,6 +95,22 @@ public class Login extends Activity {
             Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
             e.printStackTrace();
         }
+
+
+        try {
+
+            IPserver.setText(Ipserver);
+            username.setText(User);
+            password.setText(Pass);
+            IPweb.setText(Ipweb);
+            Name.setText(name);
+            Custom.setText(custom);
+
+        }catch (Exception e) {
+            Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
+            e.printStackTrace();
+        }
+
 
         try {
             //load Image
@@ -132,6 +149,18 @@ public class Login extends Activity {
                 } catch (Exception e) {
                     Log.e("  error ", String.valueOf(e)); /////////////////////////////////////////////////////////////////////////////////
                     e.printStackTrace();
+                }
+            }
+        });
+
+
+        btn_send.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+                }else {
+                    v.animate().scaleY(1f).scaleX(1f).start();
                 }
             }
         });

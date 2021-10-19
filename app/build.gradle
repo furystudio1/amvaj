@@ -7,7 +7,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
     lintOptions {
@@ -22,8 +22,8 @@ android {
         minSdkVersion 22
         //noinspection ExpiredTargetSdkVersion,ExpiredTargetSdkVersion
         targetSdkVersion 30
-        versionCode 65
-        versionName "1.3.6"
+        versionCode 66
+        versionName "1.3.7"
         resConfigs "en"
 
         ndk {
@@ -97,4 +97,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics'
     implementation 'com.google.firebase:firebase-perf'
+
+    implementation 'com.google.android.material:material:1.5.0-alpha04'
+    //noinspection GradleCompatible
 }

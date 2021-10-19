@@ -29,5 +29,8 @@
     <color name="text_shadow">#7F000000</color>
     <color name="hich">#00000000</color>
     <color name="hich2">#14FFFFFF</color>
+    <color name="hich3">#0DFFFFFF</color>
+    <color name="hich4">#33FFFFFF</color>
+    <color name="error">#FF0000</color>
 
 </resources>

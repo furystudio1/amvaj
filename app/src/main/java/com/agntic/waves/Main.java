@@ -20,6 +20,7 @@ import android.text.format.DateFormat;
 import android.text.format.Time;
 import android.util.Base64;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -175,7 +176,7 @@ public class Main extends Activity {
     private static int likenumber;
     private static String lastchannelset;
 
-    DrawerLayout drawerlayout;
+    static DrawerLayout drawerlayout;
     public static Activity fa;
 
     // Get Save
@@ -695,6 +696,19 @@ public class Main extends Activity {
             }
         });
 
+
+        esm.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+                }else {
+                    v.animate().scaleY(1f).scaleX(1f).start();
+                }
+            }
+        });
+
+
         connectiontab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -702,6 +716,19 @@ public class Main extends Activity {
 
             }
         });
+
+        connectiontab.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+                }else {
+                    v.animate().scaleY(1f).scaleX(1f).start();
+                }
+            }
+        });
+
+
 
         walletclick.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -715,6 +742,17 @@ public class Main extends Activity {
             }
         });
 
+
+        walletclick.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+                }else {
+                    v.animate().scaleY(1f).scaleX(1f).start();
+                }
+            }
+        });
 
         mainbackmusicw.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -733,6 +771,18 @@ public class Main extends Activity {
                 startActivity(uou);
                 Main.this.finish();
 
+            }
+        });
+
+
+        updateTab.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+                }else {
+                    v.animate().scaleY(1f).scaleX(1f).start();
+                }
             }
         });
 
@@ -775,6 +825,19 @@ public class Main extends Activity {
                 } catch (Exception e) {
                     FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
+                }
+            }
+        });
+
+        hometv.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+
+                }else {
+
+                    v.animate().scaleY(1f).scaleX(1f).start();
                 }
             }
         });
@@ -842,6 +905,21 @@ public class Main extends Activity {
                 }
             }
         });
+
+        liketv.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+
+                }else {
+
+                    v.animate().scaleY(1f).scaleX(1f).start();
+                }
+            }
+        });
+
+
 
         listtv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -914,6 +992,21 @@ public class Main extends Activity {
                 } catch (Exception e) {
                     FirebaseCrashlytics.getInstance().recordException(e);
                     e.printStackTrace();
+                }
+            }
+        });
+
+
+
+        listtv.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+
+                }else {
+
+                    v.animate().scaleY(1f).scaleX(1f).start();
                 }
             }
         });
@@ -1040,6 +1133,17 @@ public class Main extends Activity {
             }
         });
 
+        weatherclick.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+                }else {
+                    v.animate().scaleY(1f).scaleX(1f).start();
+                }
+            }
+        });
+
         stream.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -1094,6 +1198,17 @@ public class Main extends Activity {
                         e.printStackTrace();
                     }
 
+                }
+            }
+        });
+
+        ramz.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    v.animate().scaleY(1.1f).scaleX(1.1f).start();
+                }else {
+                    v.animate().scaleY(1f).scaleX(1f).start();
                 }
             }
         });
@@ -1877,6 +1992,8 @@ public class Main extends Activity {
             e.printStackTrace();
         }
 
+        videos.add(new Video("Title", "Url", "Numb"));
+
     }
 
     //get all data from rest
@@ -1922,6 +2039,8 @@ public class Main extends Activity {
         }
 
         favorite();
+
+        drawerlayout.closeDrawers();
 
     }
 
@@ -2057,7 +2176,7 @@ public class Main extends Activity {
         } else if (n == 5) {
             //hide start, hide main page, Hide web2, show Stream
 
-            video(); ///IDK
+            //video(); ///IDK
             where = 5;
             rl_suport.setVisibility(View.INVISIBLE);
             video_surface_frame_Menu.setVisibility(View.VISIBLE);
@@ -2293,7 +2412,77 @@ public class Main extends Activity {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Log.e("  All Json loge ", "eerror");
+                            Log.e("  All Json loge ", "eerror 2415");
+                            // Log.e("VOLLEY", "ERROR");
+
+                        }
+                    }) {
+                @Override
+                public Map<String, String> getHeaders() throws com.android.volley.AuthFailureError {
+                    HashMap<String, String> params = new HashMap<String, String>();
+                    String creds = String.format("%s:%s", "b", "b");
+                    String auth = "Basic " + Base64.encodeToString(creds.getBytes(), Base64.DEFAULT);
+                    params.put("Authorization", auth);
+                    return params;
+                }
+            };
+
+            requestQueue.add(jsonObjectRequest);
+
+            JsonObjectRequest jsonObjectRequest2 = new JsonObjectRequest(Request.Method.POST, "http://192.168.40.2/Amvaj/update/jsonlocal.php?auth=" + Auth, null, new Response.Listener<JSONObject>() {
+
+                @Override
+                public void onResponse(JSONObject response) {
+                    try {
+                        //VolleyLog.v("Response:%n %s", response.toString(4));
+
+                        String version = "",urlApk = null;
+                        if (!response.isNull("auth")) {
+                            AuthServer = response.getString("auth");
+                        }
+                        if (!response.isNull("version")) {
+                            version = response.getString("version");
+                        }
+                        if (!response.isNull("urlApk")) {
+                            urlApk = response.getString("urlApk");
+                        }
+
+                        if (AuthServer.equals(Auth)){
+                            //nothing
+                        }else {
+                            //access denny
+
+                            one_play_editor.putString("authServer", AuthServer);
+                            one_play_editor.apply();
+
+                            Intent uou = new Intent(Main.this, Dialog.class);
+                            uou.putExtra("what",2);
+                            startActivity(uou);
+                            Main.this.finish();
+                        }
+
+                        if (version.equals(getString(R.string.version2))){
+                            //nothing
+                        }else {
+                            //update available
+                            one_play_editor.putString("update", urlApk);
+                            one_play_editor.apply();
+                            updateTab.setVisibility(View.VISIBLE);
+                        }
+                        //MobileAdapter.notifyDataSetChanged();
+                        //videoAdapter.setLoading(false);
+                    } catch (JSONException e) {
+                        Log.e("  error ", String.valueOf(e));
+                        e.printStackTrace();
+                    }
+
+
+                }
+            },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("  All Json loge ", "eerror 2485");
                             // Log.e("VOLLEY", "ERROR");
                         }
                     }) {
@@ -2307,8 +2496,9 @@ public class Main extends Activity {
                 }
             };
 
+            requestQueue.add(jsonObjectRequest2);
 
-            requestQueue.add(jsonObjectRequest);
+
         } catch (Exception e) {
             FirebaseCrashlytics.getInstance().recordException(e);
             e.printStackTrace();

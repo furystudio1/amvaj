@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">امواج</string>
 
-    <string name="authentication">authentication</string>
+    <string name="authentication">Authentication</string>
     <string name="IP_Server">IP Server</string>
     <string name="IP_Web_Service">IP Web Service</string>
     <string name="username">username</string>
@@ -12,8 +12,8 @@
 
 
     <string name="appname2">امواج گستر نوین</string>
-    <string name="version">version waves v1.3.4</string>
-    <string name="version2">1.3.4</string>
+    <string name="version">version waves v1.3.7</string>
+    <string name="version2">1.3.7</string>
 
 
     <string name="room">واحد</string>

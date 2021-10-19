@@ -39,6 +39,7 @@
             android:id="@+id/RecycleList"
             android:layout_width="wrap_content"
             android:textSize="15sp"
+            android:focusableInTouchMode="true"
             android:focusable="true"
             android:layout_height="wrap_content"/>
     </androidx.core.widget.NestedScrollView>
